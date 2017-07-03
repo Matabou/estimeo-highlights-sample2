@@ -8,10 +8,8 @@ import Header from '../components/Header';
 
 describe('<Header />', () => {
 
-    /**
-     * TODO
-     */
-    it('will fail', () => {
-        expect(false).toBe(true)
+    it('has a "<title>" tag equal to Estimeo Highlights', () => {
+      const wrapper = shallow(<Header />);
+      expect(wrapper.find('title').text()).toBe("Estimeo Highlights");
     })
 })
