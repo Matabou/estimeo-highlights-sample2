@@ -11,10 +11,7 @@ jobs:
       - run: npm install
       - run: npm run build
       - run: npm run test
-  deployment:
-    working_directory: ~/estimeo-highlights-sample2/
-    steps:
-      - type: deploy
+      - deploy:
           name: "Deploy to Heroku"
           command: |
             if [ "${CIRCLE_BRANCH}" == "master" ]; then
